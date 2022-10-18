@@ -1,0 +1,10 @@
+.header {
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    text-align: center;
+    line-height: 60px;
+}
