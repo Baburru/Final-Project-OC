@@ -1,29 +1,35 @@
-import React from "react"
-import picture from "../../assets/LOGO.png"
-import { Link } from "react-router-dom"
-import styled from "styled-components"
-import "../../styles/Header.css"
+import React from 'react';
+import picture from '../../assets/LOGO.svg';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import '../../styles/Header.css';
 
-const StyledLink = styled(Link)`
+const HeaderLink = styled(Link)`
   padding: 15px;
   color: #ff6060;
   text-decoration-line: none;
-  font-size: 120%;
-`
+  font-size: calc(15px + 1vw);
+  margin-left: auto;
+  margin-right: 0;
+`;
 
-const StyledImg = styled.img`
-  max-width: 211px;
-  max-height: 68px;
-`
+const HeaderImg = styled.img`
+  margin-left: 50px;
+  width: 25%;
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: 20px;
+  max-width: 200px;
+`;
 
 export default function Header() {
   return (
     <div className="header">
-      <StyledImg src={picture} alt="kasa logo" />
+      <HeaderImg src={picture} alt="kasa logo" />
       <nav>
-        <StyledLink to="/">Accueil</StyledLink>
-        <StyledLink to="/about">A propos</StyledLink>
+        <HeaderLink to="/">Accueil</HeaderLink>
+        <HeaderLink to="/about">A propos</HeaderLink>
       </nav>
     </div>
-  )
+  );
 }

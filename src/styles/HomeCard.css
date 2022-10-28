@@ -1,0 +1,16 @@
+.card-img-gradient {
+    max-width: 100%;
+    width: 800px;
+    margin: auto;
+}
+
+.card-img-gradient::after {
+    display: block;
+    position: relative;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.7794468129048494) 0%, rgba(0, 0, 0, 0.311659698058911) 35%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 10px;
+    margin-top: -152px;
+    height: 150px;
+    width: 100%;
+    content: '';
+}
