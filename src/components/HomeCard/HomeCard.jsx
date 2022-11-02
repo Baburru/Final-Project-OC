@@ -33,9 +33,12 @@ const HCCardH2 = styled.h2`
   color: white;
 `;
 
-function HomeCard({ picture, title }) {
+function HomeCard({ picture, title, id }) {
+  function changePage() {
+    window.location.href = `/sheet/${id}`;
+  }
   return (
-    <HCMainDiv className="card-main">
+    <HCMainDiv onClick={changePage} className="card-main">
       <div className="card-img-gradient">
         <HCCardImg src={picture} />
       </div>

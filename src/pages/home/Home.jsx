@@ -68,6 +68,7 @@ function Home() {
             key={`${house.id}-${index}`}
             title={house.title}
             picture={house.cover}
+            id={house.id}
           />
         ))}
       </HomeMainBackground>
