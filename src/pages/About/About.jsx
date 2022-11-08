@@ -1,49 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
 
-import AboutDropdown from '../../components/dropdown/AboutDropdown';
+import AboutDropdown from '../../components/dropdown/AboutDropdown'
+import '../../styles/About.css'
 
-import dropdowndata from '../../dropdown.json';
-
-import BannerImg from '../../assets/about_img.jpg';
-
-const AboutBanner = styled.div`
-  width: 90%;
-  position: relative;
-  text-align: center;
-  max-height: 180px;
-  height: auto;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url(${BannerImg});
-  border-radius: 25px;
-  margin-bottom: 30px;
-`;
-
-const AboutBannerBackground = styled.div`
-  width: 100%;
-  height: 180px;
-  background-color: #000000;
-  opacity: 0.3;
-  border-radius: 25px;
-`;
-
-const AboutMainContent = styled.div`
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 70px;
-`;
+import dropdowndata from '../../dropdown.json'
 
 export default function About() {
   return (
     <div>
-      <AboutBanner>
-        <AboutBannerBackground />
-      </AboutBanner>
-      <AboutMainContent>
+      <div className="AboutBanner">
+        <div className="AboutBannerBackground"></div>
+      </div>
+      <div className="AboutMainContent">
         {dropdowndata.map((subject, index) => (
           <AboutDropdown
             key={index}
@@ -51,7 +19,7 @@ export default function About() {
             content={subject.content}
           />
         ))}
-      </AboutMainContent>
+      </div>
     </div>
-  );
+  )
 }

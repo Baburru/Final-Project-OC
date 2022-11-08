@@ -1,8 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import AboutDropdown from '../../components/dropdown/AboutDropdown'
+import '../../styles/HouseSheet.css'
 
 import data from '../../data.json'
+import Carousel from '../../components/Carousel/Carousel'
 
 export default function HouseSheet() {
   const account = useParams().id
@@ -13,28 +15,38 @@ export default function HouseSheet() {
   console.log(obj)
   return (
     <div>
-      <div className="carousel"></div>
+      <div className="carousel">
+        <Carousel picList={obj.pictures} />
+      </div>
       <div>
-        <div className="left-content">
-          <h1>{obj.title}</h1>
-          <h2>{obj.location}</h2>
-          <div className="tag-container">
-            {tagList.map((tag) => (
-              <p key={tag}>{tag}</p>
-            ))}
+        <div className="info-header">
+          <div className="left-content">
+            <h1 className="hs-h1">{obj.title}</h1>
+            <h2 className="hs-h2">{obj.location}</h2>
+            <div className="tag-container">
+              {tagList.map((tag) => (
+                <p className="tag" key={tag}>
+                  {tag}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="right-content">
-          <div className="host-infos">
-            <p>{obj.host.name}</p>
-            <img src={obj.host.picture} alt="host PP" />
+          <div className="right-content">
+            <div className="host-infos">
+              <p className="host-name">{obj.host.name}</p>
+              <img className="host-img" src={obj.host.picture} alt="host PP" />
+            </div>
+            <div className="rating"></div>
           </div>
-          <div className="rating"></div>
         </div>
       </div>
       <div className="main-content">
         <AboutDropdown title="Description" content={obj.description} />
-        <AboutDropdown title="Equipements" content={obj.equipments} />
+        <AboutDropdown
+          title="Equipements"
+          type="list"
+          content={obj.equipments}
+        />
       </div>
     </div>
   )

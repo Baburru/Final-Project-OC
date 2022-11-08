@@ -1,0 +1,55 @@
+.main-content {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.info-header {
+    width: 90%;
+    margin: auto;
+}
+
+.left-content {
+    color: #FF6060;
+    font-size: 90%;
+    font-weight: 100;
+}
+
+.tag-container {
+    margin-top: 20px;
+    display: flex;
+}
+
+.tag {
+    padding: 5px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #FF6060;
+    text-align: center;
+    color: white;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.host-infos {
+    display: flex;
+    color: #FF6060;
+}
+
+.host-img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.host-name {
+    line-height: 80px;
+    margin-right: 20px;
+    font-size: 110%;
+}
+
+.hs-h1 , .hs-h2  {
+    font-weight: 100;
+}
